@@ -1,0 +1,81 @@
+% % =====================================================================
+% % cv.tex — Document principal
+% % Compilation : latexmk -xelatex cv.tex   (ou xelatex cv.tex deux fois)
+% % =====================================================================
+% \documentclass[11pt,a4paper]{article}
+% \usepackage{preamble}
+
+% \begin{document}
+
+% % ---- En-tête (pleine largeur) ----
+% \input{sections/header.tex}
+
+% \cvsection{Profil}
+% {\small
+% Autonome et responsable, je m'investis pleinement dans les missions confiées, 
+% avec rigueur et précision. Mon relationnel et ma capacité d'adaptation me permettent 
+% de m'intégrer vite dans une équipe, en gardant mon sang-froid face aux imprévus.}
+% % ---- Corps : deux colonnes via paracol ----
+% \columnratio{0.4}            % colonne gauche = 32 %, droite = 68 %
+% \setlength{\columnsep}{1.4em}
+
+% \begin{paracol}{2}
+
+%   % ----- Colonne latérale (gauche) -----
+%   \RaggedRight                % pas de justification en colonne étroite
+%   \input{sections/skills.tex}
+
+%   \switchcolumn
+
+%   % ----- Colonne principale (droite) -----
+%   \input{sections/education.tex}
+%   \input{sections/experience.tex}
+%   \input{sections/projects.tex}
+
+% \end{paracol}
+
+% \end{document}
+% =====================================================================
+% cv.tex — Document principal
+% Compilation : latexmk -xelatex cv.tex
+% =====================================================================
+\documentclass[11pt,a4paper]{article}
+\usepackage{preamble}
+
+\begin{document}
+
+\columnratio{0.36}           % colonne gauche = 34 %, droite = 66 %
+\setlength{\columnsep}{3em}
+
+\begin{paracol}{2}
+
+  % ===== Colonne gauche =====
+  \RaggedRight
+  {\begin{center}\huge\bfseries\color{accent}Camile BRIARD\end{center}}\par
+
+  \begin{center}\cvphoto{sections/photo.png}{2.6cm}\end{center}
+  \vspace{5pt}
+  \input{sections/skills.tex}
+
+  \switchcolumn
+
+  % ===== Colonne droite =====
+  {\Large\bfseries\itshape\color{accent} \begin{center}Recherche stage de fin d’études en ingénierie aéronautique -- 6 mois -- février 2027 \end{center}}\par
+  \vspace{7pt}
+
+  \cvsection{Profil}
+  {\small
+  Étudiant ingénieur à Centrale Nantes, en double diplôme aéronautique au Politecnico di Milano, 
+  spécialisé en aérodynamique supersonique et en dynamique des structures et aéroélasticité. 
+  Rigoureux et autonome, fort d'une première expérience industrielle en mission pour Airbus Atlantic, 
+  je recherche un stage de fin d’études à dominante technique et/ou R\&D.}
+  \vspace{6pt}
+
+
+  \input{sections/education.tex}
+  \input{sections/projects.tex}
+  \input{sections/experience.tex}
+
+\end{paracol}
+
+\end{document}
