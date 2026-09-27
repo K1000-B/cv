@@ -1,10 +1,10 @@
 # Fdb version 4
-["xdvipdfmx"] 1790338440.2721 "build/cv.xdv" "build/cv.pdf" "build/cv" 1790338443.48432 0
-  "build/cv.xdv" 1790338440.19012 38556 fe1bc6007c1e0dabd9a2a4238d8ed5ea "xelatex"
+["xdvipdfmx"] 1790534704.83891 "build/cv.xdv" "build/cv.pdf" "build/cv" 1790534708.06763 0
+  "build/cv.xdv" 1790534704.7578 36208 0b50a6028e556bd3997c7bf4433c445b "xelatex"
   (generated)
   "build/cv.pdf"
   (rewritten before read)
-["xelatex"] 1790338438.44241 "cv.tex" "build/cv.xdv" "cv" 1790338443.48229 0
+["xelatex"] 1790534702.94533 "cv.tex" "build/cv.xdv" "cv" 1790534708.06527 0
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136768653 1528 f853c4d1b4e0550255e02831fdc8496f ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -161,15 +161,15 @@
   "/usr/local/texlive/2024/texmf-dist/web2c/texmf.cnf" 1708706663 41649 5d6ae549fbbcb850a863f69aa41f3d10 ""
   "/usr/local/texlive/2024/texmf-var/web2c/xetex/xelatex.fmt" 1730638624 10850186 35790bc5556ab036a00a95e3f4621aef ""
   "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
-  "build/cv.aux" 1790338440.1884 128 8ec89a09013e497d5b92563b73b0583f "xelatex"
-  "build/cv.out" 1790338440.13137 0 d41d8cd98f00b204e9800998ecf8427e "xelatex"
-  "cv.tex" 1790338312.64704 2670 1e0c318824bc1be59e9a6a002c4dffb8 ""
+  "build/cv.aux" 1790534704.75568 128 852fc3e86949e4a73cd552c13992dc37 "xelatex"
+  "build/cv.out" 1790534704.69686 0 d41d8cd98f00b204e9800998ecf8427e "xelatex"
+  "cv.tex" 1790532921.91511 2659 6f9e1ce455da3bab952cf96f0d7e9a5e ""
   "preamble.sty" 1781718973.43749 5052 29ee4478af7dc4f69506e85c68ddc382 ""
-  "sections/education.tex" 1790338436.58289 1382 03245ff25c18895c8e2047594cda1687 ""
-  "sections/experience.tex" 1790337663.87343 1550 ebf0ca35f0de112d498316dc3a33a626 ""
+  "sections/education.tex" 1790338762.05502 1342 e89d053c9601e7357fbd546c3595daeb ""
+  "sections/experience.tex" 1790534636.13519 1572 9608072822388e047a519435bf1975c6 ""
   "sections/photo.png" 1781717884.02893 680405 78ce0271978002a89630512ce32a211d ""
-  "sections/projects.tex" 1781715994.73725 954 e1e4b11109fa851fdb3184289d0e23f5 ""
-  "sections/skills.tex" 1781720230.90162 1995 00574ee21ff50849de0fe14275bff9d2 ""
+  "sections/projects.tex" 1790338934.68126 860 5819809be0237aca4740395ebc77113c ""
+  "sections/skills.tex" 1790534700.62964 1990 6d4d5e1bbf74eaa3eddfb3de49ff0c68 ""
   (generated)
   "build/cv.aux"
   "build/cv.log"

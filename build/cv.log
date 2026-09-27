@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.11.3)  25 SEP 2026 14:13
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.11.3)  27 SEP 2026 21:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -912,17 +912,19 @@ Package caption Info: End \AtBeginDocument code.
 File: sections/photo.png Graphic file (type bmp)
 <sections/photo.png>
  (./sections/skills.tex
-Overfull \hbox (0.22884pt too wide) in paragraph at lines 18--19
-[]\TU/HelveticaNeue(0)/m/n/10 Très bonne maîtrise de MATLAB, Python, 
+Overfull \hbox (4.11884pt too wide) in paragraph at lines 18--19
+[]\TU/HelveticaNeue(0)/m/n/10 Très bonne maîtrise de \TU/HelveticaNeue(0)/b/n/1
+0 MATLAB\TU/HelveticaNeue(0)/m/n/10 , \TU/HelveticaNeue(0)/b/n/10 Python\TU/Hel
+veticaNeue(0)/m/n/10 , 
  []
 
 
-Overfull \hbox (5.24883pt too wide) in paragraph at lines 30--30
+Overfull \hbox (5.24883pt too wide) in paragraph at lines 31--31
 []\TU/HelveticaNeue(0)/b/n/12 QUALITÉS PROFESSIONNELLES[]  
  []
 
 
-Overfull \hbox (7.6355pt too wide) in paragraph at lines 46--47
+Overfull \hbox (7.6355pt too wide) in paragraph at lines 47--48
 []\TU/HelveticaNeue(0)/m/n/10 Anglais — courant (TOEIC 2024 : 920/990)  
  []
 
@@ -944,13 +946,13 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 14.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ))
 (./sections/projects.tex
-Underfull \hbox (badness 10000) in paragraph at lines 15--15
+Underfull \hbox (badness 10000) in paragraph at lines 13--13
 []\TU/HelveticaNeue(0)/m/n/10.95 Analyse aérodynamique et optimisation des perf
 ormances de
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
+Underfull \hbox (badness 10000) in paragraph at lines 23--23
 []\TU/HelveticaNeue(0)/m/n/10.95 Proposition de solutions d’automatisation et c
 onception indus-
  []
@@ -963,19 +965,13 @@ eloppement et
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 26--26
-[]\TU/HelveticaNeue(0)/m/n/10.95 Développement d’un solveur en python détermina
-nt géométrie
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 35--35
-[]\TU/HelveticaNeue(0)/m/n/10.95 Encadrement et briefing d’élèves pilotes lors 
-de stages en vol ;
+[]\TU/HelveticaNeue(0)/m/n/10.95 Développement d’un solveur python, déterminant
+ géométrie et
  []
 
 ) [1
 
-] [2] (build/cv.aux)
+] (build/cv.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
@@ -984,12 +980,12 @@ Package rerunfilecheck Info: File `cv.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 27065 strings out of 474773
- 536860 string characters out of 5757724
- 1949839 words of memory out of 5000000
- 48776 multiletter control sequences out of 15000+600000
- 563317 words of font info for 85 fonts, out of 8000000 for 9000
+ 27067 strings out of 474773
+ 536927 string characters out of 5757724
+ 1948839 words of memory out of 5000000
+ 48777 multiletter control sequences out of 15000+600000
+ 563325 words of font info for 86 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  117i,5n,121p,434b,788s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on build/cv.xdv (2 pages, 38556 bytes).
+Output written on build/cv.xdv (1 page, 36208 bytes).
