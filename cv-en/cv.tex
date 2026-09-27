@@ -1,0 +1,42 @@
+% =====================================================================
+% cv.tex — Main document
+% Compilation: latexmk -xelatex cv.tex
+% =====================================================================
+\documentclass[10pt,a4paper]{article}
+\usepackage{preamble}
+
+\begin{document}
+
+\columnratio{0.36}           % left column = 36%, right column = 64%
+\setlength{\columnsep}{2em}
+
+\begin{paracol}{2}
+
+  % ===== Left column =====
+  \RaggedRight
+  {\begin{center}\huge\bfseries\color{accent}Camile BRIARD\end{center}}\par
+
+  \begin{center}\cvphoto{sections/photo.png}{2.6cm}\end{center}
+  \vspace{5pt}
+  \input{sections/skills.tex}
+
+  \switchcolumn
+
+  % ===== Right column =====
+  {\large\bfseries\itshape\color{accent}\begin{center}Final-year internship in aeronautical engineering | 6 months | February 2027\end{center}}\par
+  \vspace{4pt}
+
+  \cvsection{Profile}
+  {\small
+  Centrale Nantes engineering student pursuing a dual degree in Aeronautical Engineering at Politecnico di Milano,
+  with a focus on supersonic aerodynamics, structural dynamics, and aeroelasticity. Rigorous and self-directed,
+  with initial industrial experience at Airbus Atlantic, I am seeking a technically focused final-year internship.}
+  \vspace{3pt}
+
+  \input{sections/education.tex}
+  \input{sections/projects.tex}
+  \input{sections/experience.tex}
+
+\end{paracol}
+
+\end{document}

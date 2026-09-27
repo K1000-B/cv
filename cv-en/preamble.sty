@@ -1,0 +1,129 @@
+% =====================================================================
+% preamble.sty — Style et macros du CV (XeLaTeX uniquement)
+% =====================================================================
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{preamble}[2026/06/17 v1.0 CV —  INTERIM]
+
+% ---------------------------------------------------------------------
+% Géométrie de page
+% ---------------------------------------------------------------------
+\RequirePackage[a4paper,
+                top=0.8cm, bottom=0.8cm,
+                left=1cm, right=1cm,
+                includefoot=false]{geometry}
+
+% ---------------------------------------------------------------------
+% Packages
+% ---------------------------------------------------------------------
+\RequirePackage{fontspec}        % polices système (XeLaTeX)
+\RequirePackage{xcolor}          % couleurs
+\RequirePackage{paracol}         % 2 colonnes synchronisées
+\RequirePackage{enumitem}        % contrôle espacement des listes
+\RequirePackage{tikz}            % barres de compétences
+\RequirePackage{fontawesome5}    % icônes
+\RequirePackage{ragged2e}        % \RaggedRight (sans coupure de mot)
+\RequirePackage[hidelinks]{hyperref}
+\RequirePackage{amsmath}         % pour les exposants et indices dans les mathématiques
+\RequirePackage{amsfonts}         % pour les polices mathématiques
+\RequirePackage{amssymb}          % pour les symboles mathématiques
+\RequirePackage{graphicx}         % pour inclure des images
+\RequirePackage{caption}          % pour personnaliser les légendes des figures et tableaux
+\RequirePackage{booktabs}         % pour des tableaux de meilleure qualité
+\RequirePackage{array}            % pour des tableaux plus flexibles
+\RequirePackage{multirow}        % pour fusionner des cellules dans les tableaux
+
+
+% ---------------------------------------------------------------------
+% Couleurs (modifiables ici)
+% ---------------------------------------------------------------------
+\definecolor{accent}{HTML}{1F3A52}      % bleu ardoise foncé — sobre
+\definecolor{accentlight}{HTML}{E4E9EF} % gris-bleu très clair pour fonds de barres
+\definecolor{textmain}{HTML}{1A1A1A}
+\definecolor{textsoft}{HTML}{4A4A4A}
+
+% ---------------------------------------------------------------------
+% Polices — fallback : Helvetica Neue → Roboto → Latin Modern Sans
+% ---------------------------------------------------------------------
+\IfFontExistsTF{Helvetica Neue}{%
+  \setmainfont{Helvetica Neue}[Ligatures=TeX]%
+}{%
+  \IfFontExistsTF{Roboto}{%
+    \setmainfont{Roboto}[Ligatures=TeX]%
+  }{%
+    \setmainfont{Latin Modern Sans}[Ligatures=TeX]%
+  }%
+}
+
+% ---------------------------------------------------------------------
+% Réglages globaux
+% ---------------------------------------------------------------------
+\pagestyle{empty}                % pas de numéro de page ni d'en-tête
+\setlength{\parindent}{0pt}
+\color{textmain}
+
+% Listes très compactes (espacement géré par enumitem, pas par \vspace)
+\setlist{nosep, leftmargin=1.1em, topsep=1pt, partopsep=0pt, parsep=0pt}
+\setlist[itemize]{label=\textcolor{accent}{\small\textbullet}, itemsep=0pt}
+
+% ---------------------------------------------------------------------
+% MACROS
+% ---------------------------------------------------------------------
+% \cvphoto{fichier}{rayon}
+\newcommand{\cvphoto}[2]{%
+  \begin{tikzpicture}
+    \clip (0,0) circle (#2);
+    \node at (0,-0.5) {\includegraphics[width=\linewidth]{#1}};
+  \end{tikzpicture}%
+}
+
+% \cvsection{titre}
+%   Titre de section en majuscules avec règle horizontale colorée.
+%   #1 — chaîne du titre (ex : « Formation »).
+\newcommand{\cvsection}[1]{%
+  \vspace{3pt}%
+  {\color{accent}\large\bfseries\MakeUppercase{#1}}\par
+  \vspace{-2pt}%
+  {\color{accent}\rule{\linewidth}{0.6pt}}\par
+  \vspace{3pt}%
+}
+
+% \cventry{titre}{dates}{organisation}{contenu}
+%   Entrée pour formation, expérience ou projet.
+%   #1 — intitulé (poste, diplôme, projet)
+%   #2 — dates (ex : « 2023 — 2025 »)
+%   #3 — organisation et lieu (ex : « ISAE-SUPAERO, Toulouse »)
+%   #4 — contenu libre (texte ou itemize)
+\newcommand{\cventry}[4]{%
+  \begin{minipage}{\linewidth}%
+    {\bfseries #1}\hfill{\small\color{textsoft}#2}\par
+    {\itshape\color{accent}#3}\par
+    \vspace{2pt}%
+    #4%
+  \end{minipage}%
+  \par\vspace{3pt}%
+}
+
+% \cvcontact{icône}{texte}
+%   Ligne de contact (icône colorée + texte aligné).
+%   #1 — commande icône (ex : \faEnvelope)
+%   #2 — texte (ex : « jean.dupont@mail.com »)
+\newcommand{\cvcontact}[2]{%
+  \makebox[1.4em][l]{\color{accent}#1}#2\par\vspace{1pt}%
+}
+
+% \skillbar{label}{niveau}
+%   Barre de compétence dessinée en TikZ.
+%   #1 — libellé de la compétence
+%   #2 — niveau entre 0 et 1 (ex : 0.8)
+\newcommand{\skillbar}[2]{%
+  \par\vspace{3pt}%
+  {\small #1}\par
+  \vspace{1pt}%
+  \begin{tikzpicture}
+    \draw[accentlight, line width=3.5pt] (0,0) -- (\linewidth, 0);
+    \draw[accent,      line width=3.5pt] (0,0) -- (#2\linewidth, 0);
+  \end{tikzpicture}%
+  \par
+}
+
+\endinput
